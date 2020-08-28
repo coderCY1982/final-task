@@ -1,0 +1,435 @@
+@charset "utf-8";
+
+/* =====================基本設定===================== */
+
+body {
+	font-size: 16px;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "ＭＳ ゴシック" , "MS Gothic", "Noto Sans CJK JP", TakaoPGothic,
+ system-ui, "Hiragino Sans", "YuGothic", "Arial", sans-serif;
+	color: #333333;
+	line-height:1.5;
+}
+
+img{
+	border:0;
+	max-width: 100%;
+	height: auto;
+  vertical-align: middle;
+}
+
+/* =====================文字設定===================== */
+
+a {
+  color: #333333;
+  text-decoration:none;
+}
+
+a:hover {
+  color: #999999;
+}
+
+/* =====================ヘッダー===================== */
+
+#header {
+	background:#f9f2e6;
+	border-top:#ff9900 solid 1px;
+	border-bottom:#ff9900 solid 1px;
+}
+
+#global-nav {
+	max-width:1200px;
+	height:64px;
+	margin: 0 auto;
+	overflow:hidden;
+}
+
+#global-nav #logo {
+	float: left;
+	line-height:64px;
+}
+
+#menu-pc {
+	float: right;
+}
+
+#menu-pc ul li {
+	float: left;
+	border-right:1px solid #ff9900;
+}
+
+#menu-pc ul li:first-child {
+	border-left:1px solid #ff9900;
+}
+
+#menu-pc ul li a {
+	display:block;
+	line-height: 64px;
+	padding: 0 20px;
+}
+
+#menu-pc ul li a:hover {
+	color:#ffffff;
+	background:#ff9900;
+}
+
+#menu-sp{
+	display: none;
+}
+
+@media(max-width:960px){
+    #global-nav #logo img {
+			width: 60%;
+			padding-left: 15px;
+    }
+
+		#menu-sp{
+			display: inline-block;
+			width: 34px;
+			height: 36px;
+			position: absolute;
+			right: 12px;
+			top: 14px;
+			cursor: pointer;
+		}
+
+		#menu-sp:focus{
+			outline: none;
+		}
+
+		#menu-sp span {
+			background: #996633;
+			position: absolute;
+			left: 0px;
+			width: 34px;
+			height: 2px;
+		}
+
+		#menu-sp span:nth-of-type(1) {
+			top: 8px;
+		}
+
+		#menu-sp span:nth-of-type(2) {
+			top: 18px;
+		}
+
+		#menu-sp span:nth-of-type(3) {
+			top: 28px;
+		}
+
+		.open #menu-sp span:nth-of-type(1) {
+				transform: translateY(10px) rotate(-45deg);
+		}
+
+		.open #menu-sp span:nth-of-type(2) {
+				display: none;
+		}
+
+		.open #menu-sp span:nth-of-type(3) {
+				transform: translateY(-10px) rotate(45deg);
+		}
+
+		#menu-pc {
+      position: absolute;
+      background: #f9f2e6;
+      width: 100%;
+      text-align: center;
+      transition: 0.5s;
+			top: -500px;
+    }
+
+    #menu-pc ul li {
+      float: none;
+			border-right:none;
+			border-top:1px solid #ff9900;
+    }
+
+		#menu-pc ul li:last-child {
+			border-bottom:1px solid #ff9900;
+		}
+
+		#menu-pc ul li:first-child {
+			border-left:none;
+		}
+
+		.open #menu-pc {
+			top: 64px;
+		}
+	}
+
+/* =====================メインイメージ===================== */
+
+#mainimg{
+	text-align:center;
+	background: #d8cab1;
+}
+
+/* =====================大枠===================== */
+
+#container{
+	max-width:1200px;
+	margin:30px auto;
+	overflow:hidden;
+}
+
+#container h2{
+	color:#963;
+	text-shadow: 0px 0px 5px #fff;
+	font-size:20px;
+	padding: 20px;
+	border:solid;
+	border-color: #963;
+	border-width: 1px 1px 1px 14px;
+	background: repeating-linear-gradient(45deg, #f2eadb, #f2eadb 3px,#fff 3px, #fff 7px);
+	margin-bottom:30px;
+}
+
+#main{
+	float:left;
+	width:70%;
+}
+
+#sub{
+	float:right;
+	width: calc(30% - 30px);
+}
+
+@media(max-width:960px){
+	#container h2{
+	text-align: center;
+	}
+
+	#main{
+	width:100%;
+	padding: 0 16px;
+	box-sizing: border-box;
+	}
+
+	#sub{
+	width:100%;
+	padding: 0 16px;
+	box-sizing: border-box;
+	}
+}
+
+/* =====================コース===================== */
+
+#course{
+	margin-bottom:40px;
+	overflow:hidden;
+}
+
+#course figure{
+	width:calc(50% - 20px);
+	float:left;
+	margin:0 10px 10px;
+	box-sizing: border-box;
+	text-align:center;
+}
+
+#course figcaption{
+	padding:10px 0;
+}
+
+@media(max-width:960px){
+	#course figure{
+		width:100%;
+		margin:0 0 10px;
+		float:none;
+	}
+}
+
+/* =====================ニュース===================== */
+
+#news {
+	margin-bottom:40px;
+}
+
+#news ul{
+	list-style-type: none;
+}
+
+#news li {
+	border-bottom:dashed 1px #996633;
+  padding:20px 0;
+}
+
+#news span{
+	background:#99cc00;
+	color:#ffffff;
+  font-size: 12px;
+	padding:10px;
+	margin-right:20px;
+}
+
+@media(max-width:960px){
+	#news span {
+		display: block;
+		margin-right:0;
+		margin-bottom:16px;
+		font-size: 16px;
+	}
+
+	#news a{
+		display: block;
+	}
+}
+
+/* =====================サブメニュー===================== */
+
+#submenu{
+	margin-bottom: 40px;
+}
+
+
+#sub ul li a{
+  display:block;
+  padding:16px 16px 16px 40px;
+}
+
+#sub ul li{
+	border: dashed 1px #996633;
+	margin-bottom:20px;
+	list-style-type:none;
+	position: relative;
+}
+
+#sub ul li:before {
+	position: absolute;
+  left: 20px;
+  top: 10px;
+	font-family:'Font Awesome 5 Free';
+  content: "\f105";
+  color: #ff9900;
+	font-size:24px;
+}
+
+#sub ul li a:hover{
+	background: #ff9900;
+	color: #fff;
+}
+
+#sub ul li:hover:before {
+  color: #fff;
+}
+
+#contents{
+	margin-bottom: 40px;
+}
+
+#sub img{
+	margin-bottom:30px;
+	}
+
+@media(max-width:960px){
+	#sub section{
+		text-align:center;
+	}
+}
+
+/* =====================フッター===================== */
+
+#footer{
+	background:#ff9900;
+	color:#ffffff;
+	text-align:center;
+	padding: 0 16px;
+}
+
+#footer h2{
+	padding: 20px;
+	font-size:20px;
+}
+
+#footer address{
+	font-style: normal;
+}
+
+#footer .btn{
+	background: #99cc00;
+	font-size:20px;
+	color: #ffffff;
+	font-weight: bold;
+	display: block;
+	margin: 0 auto;
+	max-width: 400px;
+	border: solid 3px #ffffff;
+	padding: 20px;
+	box-shadow:0px 4px 4px rgba(0,0,0,0.2);
+	}
+
+	#footer .btn:hover {
+	  background: #ffffff;
+	  border: solid 3px #99cc00;
+	  color: #99cc00;
+		transition: 0.5s;
+	}
+
+	.footer-text{
+		padding:10px;
+	}
+
+	.footer-text i {
+		font-size: 28px;
+		background: #f09000;
+		color:#ffffff;
+		width:56px;
+		height:56px;
+		line-height:56px;
+		margin: 5px;
+		border-radius: 4px;
+		box-shadow:2px 2px 2px rgba(0,0,0,0.2) inset;
+	}
+
+	.footer-text i:hover {
+		background: #df851a;
+	}
+
+
+	/* =====================コース詳細===================== */
+
+	#main h1{
+		font-size:24px;
+		margin-bottom:30px;
+		padding: 20px;
+		border: 1px dashed #963;
+		background: #f9f2e6;
+		color: #963;
+		box-shadow: 0 0 0 5px #f9f2e6;
+		width:calc(100% - 10px);
+		margin-left: 5px;
+		margin-top: 5px;
+		box-sizing: border-box;
+	}
+
+	@media(max-width:960px){
+		#main h1{
+			font-size: 20px;
+			text-align: center;
+		}
+	}
+
+	/* 看板 */
+
+	.ttl-img{
+		text-align:center;
+		margin-bottom:40px;
+	}
+
+	.ttl-img img {
+		background: #ffffff;
+		margin: 0 auto 30px;
+		padding:20px;
+		box-shadow: #eeeeee 0px 0px 2px 2px;
+		box-sizing: border-box;
+		width: 99%;
+	}
+
+@media(max-width:960px){
+	.ttl-img{
+		padding: 0;
+	}
+
+	.ttl-img img {
+		padding:10px;
+	}
+}

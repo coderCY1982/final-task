@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+/* オススメ */
+
+#recommend{
+	margin-bottom:40px;
+}
+
+.recommend-box{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.recommend-box li{
+	width: 50%;
+	list-style-type:none;
+	position: relative;
+	padding-left:36px;
+	margin-bottom:20px;
+	box-sizing: border-box;
+}
+
+.recommend-box li:before {
+  position: absolute;
+  left: 0;
+	top: -5px;
+  font-family:'FontAwesome';
+  content: "\f00c";
+  color: #ff9900;
+	font-size:24px;
+}
+
+@media(max-width:960px){
+
+	.recommend-box{
+		flex-direction: column;
+	}
+
+	.recommend-box li{
+		width: 100%;
+	}
+}
+
+/* ギャラリー */
+
+#gallery{
+	margin-bottom:40px;
+}
+
+.gallery-box{
+	display: flex;
+}
+
+.gallery-box figure{
+	margin:10px;
+}
+
+.gallery-box img{
+	margin-bottom:10px;
+	border-radius:10px;
+}
+
+.gallery-box figcaption{
+	text-align:center;
+}
+
+@media(max-width:960px){
+	.gallery-box{
+		flex-direction: column;
+	}
+
+	.gallery-box figure{
+		margin: 16px 0;
+	}
+}
+
+/* 生徒の声 */
+
+#comment{
+	margin-bottom:40px;
+}
+
+.comment-box{
+	display: flex;
+	align-items: stretch;
+	justify-content:space-between;
+}
+
+.comment-box div{
+	border: dashed 1px #996633;
+	padding: 20px;
+	text-align:center;
+	width:43%;
+}
+
+.comment-box h3{
+	font-size:18px;
+	padding: 10px;
+}
+
+.comment-box img{
+	width:100px;
+	height:100px;
+	border-radius:50%;
+}
+
+
+@media(max-width:960px){
+	.comment-box{
+		flex-direction: column;
+	}
+
+	.comment-box div{
+		width:100%;
+		box-sizing: border-box;
+		margin-bottom: 20px;
+	}
+}
